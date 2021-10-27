@@ -1,82 +1,59 @@
-//exercise 1
+// exercise 1
 
-function stars() {
-  let a = 0;
-  while (a < 10) {
-    console.log("*");
-    a++;
-  }
-}
-
-console.log(stars());
-
-function stars() {
-  let a = prompt("How much stars you want to see?");
-  while (a > 0) {
-    console.log("*");
-    a--;
-  }
-}
-
-stars();
-
-function stars() {
-  let a = prompt("How much stars you want to see?");
-  for (let i = a; i > 0; i--) {
-    console.log("*");
-  }
-}
-
-stars();
-
-//exercise 2
-
-function numbers() {
-  let N = prompt("Please write number");
-  for (var i = 1; i <= N; i++) {
-    console.log(i);
-  }
-}
-
-numbers();
-
-function numbers() {
-  let N = prompt("Please write number");
-  let i = 1;
-  while (i <= N) {
-    console.log(i);
-    i++;
-  }
-}
-
-numbers();
-
-function numbersReverse() {
-  let N = prompt("Please write number");
-  for (let i = N; i >= 1; i--) {
-    console.log(i);
-  }
-}
-
-numbersReverse();
-
-function evenNumbers() {
-  let N = prompt("Please write number");
-  for (var i = 2; i <= N; i++) {
-    if (i % 2 === 0) {
-      console.log(i);
-    }
-  }
-}
-
-evenNumbers();
-
-function square() {
+function triangle() {
   let N = prompt("Please write number");
   let star = "*";
-  for (var i = 1; i <= N; i++) {
-    console.log(star.repeat(N));
+  let i;
+  for (i = 1; i <= N; i++) {
+    console.log(star.repeat(i));
   }
 }
 
-stars();
+triangle();
+
+// ex 2
+
+function triangleReverse() {
+  let N = prompt("Please write number");
+  let star = "*";
+  let i;
+  for (i = N; i > 0; i--) {
+    console.log(star.repeat(i));
+  }
+}
+
+triangleReverse();
+
+// ex 3
+
+
+function triangleReverse2() {
+  let N = prompt("Please write number");
+  let star = "*";
+  let i;
+  let s = " ";
+  let j = 0;
+  for (i = N; i > 0; i--) {
+    console.log(s.repeat(j) + star.repeat(i));
+    j++;
+  }
+}
+
+triangleReverse2();
+
+// ex 4
+
+function CristmasTree() {
+  let N = prompt("Please write number");
+  let star = "*";
+  let i;
+  let s = " ";
+  let j = N;
+  for (i = 1; i <= N; i++) {
+    console.log(s.repeat(j) + star.repeat(i) + star.repeat(i - 1));
+    j--;
+  }
+  console.log(s.repeat(N) + star.repeat(1));
+}
+
+CristmasTree();
