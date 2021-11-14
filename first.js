@@ -1,59 +1,38 @@
 // exercise 1
 
-function triangle() {
-  let N = prompt("Please write number");
-  let star = "*";
-  let i;
-  for (i = 1; i <= N; i++) {
-    console.log(star.repeat(i));
-  }
-}
+const minMax = (array) => [Math.min(...array), Math.max(...array)];
 
-triangle();
+console.log(minMax([2, 214, 22, 87, 92992]));
 
-// ex 2
+// exercise 2
 
-function triangleReverse() {
-  let N = prompt("Please write number");
-  let star = "*";
-  let i;
-  for (i = N; i > 0; i--) {
-    console.log(star.repeat(i));
-  }
-}
+const isPalindrome = (text) => text === text.split("").reverse().join("");
 
-triangleReverse();
+console.log(isPalindrome("HeH"));
 
-// ex 3
+// exercise 3
 
+const findShort = (text) =>
+  text.split(" ").sort((a, b) => a.length - b.length)[0];
 
-function triangleReverse2() {
-  let N = prompt("Please write number");
-  let star = "*";
-  let i;
-  let s = " ";
-  let j = 0;
-  for (i = N; i > 0; i--) {
-    console.log(s.repeat(j) + star.repeat(i));
-    j++;
-  }
-}
+console.log(findShort("HeH JSJSJ kasfasf"));
 
-triangleReverse2();
+// exercise 4
 
-// ex 4
+const toInitials = (text) =>
+  text
+    .split(" ")
+    .map((a) => a.charAt(0) + ".")
+    .join("");
 
-function CristmasTree() {
-  let N = prompt("Please write number");
-  let star = "*";
-  let i;
-  let s = " ";
-  let j = N;
-  for (i = 1; i <= N; i++) {
-    console.log(s.repeat(j) + star.repeat(i) + star.repeat(i - 1));
-    j--;
-  }
-  console.log(s.repeat(N) + star.repeat(1));
-}
+console.log(toInitials("HeH JSJSJ"));
 
-CristmasTree();
+//exercise 5
+
+const sumDigits = (number) =>
+  number
+    .toString()
+    .split("")
+    .reduce((a, b) => +a + +b);
+
+console.log(sumDigits(11123));
