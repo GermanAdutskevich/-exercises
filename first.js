@@ -14,7 +14,7 @@ console.log(isPalindrome("HeH"));
 
 const findShort = (text) =>
   text.split(" ").sort((a, b) => a.length - b.length)[0];
-
+let num = 0;
 console.log(findShort("HeH JSJSJ kasfasf"));
 
 // exercise 4
